@@ -91,6 +91,7 @@ public class Pendu extends Application {
         this.lesImages = new ArrayList<Image>();
         this.chargerImages("./img");
         this.chrono = new Chronometre();
+        // A implementer
     }
 
     /**
@@ -107,9 +108,10 @@ public class Pendu extends Application {
      * @return le panel contenant le titre du jeu
      */
     private Pane titre(){
-        // A implementer          
+        // A implementer   
         Pane banniere = new Pane();
         return banniere;
+        
     }
 
      /**

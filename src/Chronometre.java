@@ -31,6 +31,11 @@ public class Chronometre extends Text{
      */
     public Chronometre(){
         // A implémenter
+        this.actionTemps = new ControleurChronometre(this);
+        this.timeline = new Timeline();
+        this.keyFrame = new KeyFrame(Duration.millis(1000), this.actionTemps);
+        this.timeline.setCycleCount(Animation.INDEFINITE);
+        this.timeline.getKeyFrames().add(this.keyFrame);
     }
 
     /**
@@ -40,6 +45,7 @@ public class Chronometre extends Text{
      */
     public void setTime(long tempsMillisec){
         // A implémenter
+        this.setText(String.format("%02d:%02d", tempsMillisec/3600000, (tempsMillisec%3600000)/60000, (tempsMillisec%60000)/1000));
     }
 
     /**
@@ -47,6 +53,7 @@ public class Chronometre extends Text{
      */
     public void start(){
         // A implémenter
+        this.timeline.playFromStart();
     }
 
     /**
@@ -54,6 +61,7 @@ public class Chronometre extends Text{
      */
     public void stop(){
         // A implémenter
+        this.timeline.stop();
     }
 
     /**
@@ -61,5 +69,6 @@ public class Chronometre extends Text{
      */
     public void resetTime(){
         // A implémenter
+        this.setText("0:0:0");
     }
 }
