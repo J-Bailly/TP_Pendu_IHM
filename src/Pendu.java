@@ -109,9 +109,12 @@ public class Pendu extends Application {
      */
     private Pane titre(){
         // A implementer   
-        Pane banniere = new Pane();
-        return banniere;
+        GridPane banniere = new GridPane();
         
+        banniere.getChildren().add("Jeu du Pendu");
+        banniere.setAlignment(Pos.TOP_LEFT);
+        return banniere;
+
     }
 
      /**
@@ -168,6 +171,11 @@ public class Pendu extends Application {
 
     /** lance une partie */
     public void lancePartie(){
+        // A implementer
+        this.modelePendu = new MotMystere("/usr/share/dict/french", 3, 10, MotMystere.FACILE, 10);
+        this.lesImages = new ArrayList<Image>();
+        this.chargerImages("./img");
+        this.chrono = new Chronometre();
         // A implementer
     }
 
