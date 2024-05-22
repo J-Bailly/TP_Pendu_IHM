@@ -90,7 +90,7 @@ public class Pendu extends Application {
         this.modelePendu = new MotMystere("/usr/share/dict/french", 3, 10, MotMystere.FACILE, 10);
         this.lesImages = new ArrayList<Image>();
         this.chargerImages("./img");
-        // A terminer d'implementer
+        this.chrono = new Chronometre();
     }
 
     /**
@@ -112,33 +112,33 @@ public class Pendu extends Application {
         return banniere;
     }
 
-    // /**
-     // * @return le panel du chronomètre
-     // */
-    // private TitledPane leChrono(){
+     /**
+    * @return le panel du chronomètre
+     */
+    private TitledPane leChrono(){
         // A implementer
-        // TitledPane res = new TitledPane();
-        // return res;
-    // }
+        TitledPane res = new TitledPane();
+        return res;
+    }
 
-    // /**
-     // * @return la fenêtre de jeu avec le mot crypté, l'image, la barre
-     // *         de progression et le clavier
-     // */
-    // private Pane fenetreJeu(){
+    /**
+    * @return la fenêtre de jeu avec le mot crypté, l'image, la barre
+    *         de progression et le clavier
+    */
+    private Pane fenetreJeu(){
         // A implementer
-        // Pane res = new Pane();
-        // return res;
-    // }
+        Pane res = new Pane();
+        return res;
+    }
 
-    // /**
-     // * @return la fenêtre d'accueil sur laquelle on peut choisir les paramètres de jeu
-     // */
-    // private Pane fenetreAccueil(){
+    /**
+     * @return la fenêtre d'accueil sur laquelle on peut choisir les paramètres de jeu
+     */
+    private Pane fenetreAccueil(){
         // A implementer    
-        // Pane res = new Pane();
-        // return res;
-    // }
+        Pane res = new Pane();
+        return res;
+    }
 
     /**
      * charge les images à afficher en fonction des erreurs

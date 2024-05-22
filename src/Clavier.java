@@ -27,6 +27,12 @@ public class Clavier extends TilePane{
      */
     public Clavier(String touches, EventHandler<ActionEvent> actionTouches) {
         // A implémenter
+        this.clavier = new ArrayList<>();
+        this.setAlignment(Pos.CENTER);
+        this.setPadding(new Insets(10));
+        this.setHgap(10);
+        this.setVgap(10);
+        
     }
 
     /**
